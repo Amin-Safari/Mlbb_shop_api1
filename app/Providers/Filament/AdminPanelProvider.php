@@ -28,8 +28,10 @@ class AdminPanelProvider extends PanelProvider
             ->id('admin')
             ->path('admin')
             ->login()
+            ->brandLogo('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHzaXOGwTO37dgUH1K92ozWBkqjZMvcSL9ew&s')
+            ->brandLogoHeight('3rem')
             ->colors([
-                'primary' => Color::Red,
+                'primary' => Color::Yellow,
             ])
             ->discoverResources(in: app_path('Filament/Resources'), for: 'App\Filament\Resources')
             ->discoverPages(in: app_path('Filament/Pages'), for: 'App\Filament\Pages')
