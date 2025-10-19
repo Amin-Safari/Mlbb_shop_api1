@@ -16,8 +16,10 @@ class UsersTable
     {
         return $table
             ->columns([
-                TextColumn::make('name'),
-                TextColumn::make('email'),
+                TextColumn::make('name')
+                    ->searchable(),
+                TextColumn::make('email')
+                    ->searchable(),
                 TextColumn::make('password')
             ])
             ->filters([

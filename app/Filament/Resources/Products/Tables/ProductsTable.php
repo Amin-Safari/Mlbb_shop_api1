@@ -53,7 +53,6 @@ class ProductsTable
                     ->toggleable(),
                 IconColumn::make('popular')
                     ->sortable()
-                    ->searchable()
                     ->alignCenter()
                     ->toggleable()
                     ->boolean(),

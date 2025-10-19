@@ -25,7 +25,13 @@ class UserMessageForm
                     ->length(11)
                     ->required(),
                 Select::make('subject')
-                    ->options(['support', 'sales', 'complaint', 'cooperation', 'other'])
+                    ->options([
+                        'support' => 'support',
+                        'sales' => 'sales',
+                        'complaint' => 'complaint'
+                        , 'cooperation' => 'cooperation',
+                        'other' => 'other'
+                    ])
                     ->required(),
                 Textarea::make('message')
                     ->required()

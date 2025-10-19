@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('phone');
             $table->string('subject')->comment('support,sales,complaint,cooperation,other');
             $table->text('message');
+            $table->boolean('seen')->default(false);
             $table->timestamps();
         });
     }

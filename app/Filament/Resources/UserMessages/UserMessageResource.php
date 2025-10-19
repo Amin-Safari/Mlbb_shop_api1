@@ -19,6 +19,16 @@ class UserMessageResource extends Resource
 {
     protected static ?string $model = um::class;
 
+    public static function getNavigationBadge(): ?string
+    {
+        return static::getModel()::where('seen', false)->count();
+    }
+
+    public static function getNavigationBadgeColor(): ?string
+    {
+        return static::getModel()::where('seen', false)->count() > 0 ? 'warning' : 'gray';
+    }
+
     protected static string|BackedEnum|null $navigationIcon = Heroicon::Envelope;
 
     protected static ?string $recordTitleAttribute = 'User Messages';
